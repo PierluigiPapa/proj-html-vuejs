@@ -1,5 +1,11 @@
 <script>
 import AppHeader from './components/Header/AppHeader.vue';
+
+export default {
+  components: {
+    AppHeader,
+  }
+}
 </script>
 
 <template>
@@ -7,6 +13,8 @@ import AppHeader from './components/Header/AppHeader.vue';
   
 </template>
 
-<style scoped>
+<style lang="scss">
+@use "./styles/general.scss" as *; 
+
 
 </style>
