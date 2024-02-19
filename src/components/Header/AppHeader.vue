@@ -1,4 +1,6 @@
 <script>
+
+
 export default {
     name: 'AppHeader',
     props: {
@@ -40,7 +42,6 @@ export default {
         }
     }
 }
-
 </script>
 
 <template>
@@ -58,6 +59,10 @@ export default {
                                 :class="{ 'active': option.current }" :url="option.url">{{
                                     option.text }}</a></li>        
                     </ul>
+                    <font-awesome-icon icon="fa-brands fa-linkedin" class="fa-icon fa-xl" />
+                    <font-awesome-icon icon="fa-brands fa-instagram" class="fa-icon fa-xl" />
+                    <font-awesome-icon icon="fa-brands fa-facebook" class="fa-icon fa-xl" />
+                    <font-awesome-icon icon="fa-brands fa-x-twitter" class="fa-icon fa-xl" />
                 </div>
             </div>
         </nav>
@@ -114,8 +119,10 @@ i:hover {
     cursor: pointer;
 }
 
-.fa-linkedin {
-    margin: 0 5px;
-    color: #333333;
+.fa-icon {
+    display: inline-block;
+    vertical-align: middle; 
+    margin-right: 10px; 
 }
+
 </style>
