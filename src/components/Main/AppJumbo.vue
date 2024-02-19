@@ -13,35 +13,32 @@ export default {
                     <p class="text-grey">A wonderful serenity has taken possession of my entire soul, like these sweet
                         mornings of spring which i enjoy with my whole heart.</p>
                 </div>
-
-                <div id="jumbo-bottom" class="col-12">
+                <div id="bottom" class="col-12">
                     <div class="row main">
                         <div class="col-6 d-flex justify-content-center flex-column">
-                            <h4 class="ps-5 mb-3"> <span class="white">Limited sale:</span> All courses with 55% off</h4>
+                            <h4 class="ps-5 mb-3"><strong class="white">Limited Sale:</strong> All courses with 55%
+                                off
+                            </h4>
+                            <div class="input-group px-5">
+                                <input v-model="email" type="email" class="form-control py-2"
+                                    placeholder="Enter your E-mail" @keyup.enter="emailGet">
+                                <button @click="emailGet" type="button">SUBSCRIBE</button>
+                            </div>
                         </div>
-                        
-                        <div class="input-group px-5">
-                            <input type="text">
-                            <button>Subscribe</button>
-                        </div>
-
-                        <div class="6">
+                        <div class="col-6">
                             <div class="row main">
                                 <div class="col-3">
                                     <h2>26</h2>
                                     <h5>Days</h5>
                                 </div>
-
                                 <div class="col-3">
                                     <h2>01</h2>
                                     <h5>Hours</h5>
                                 </div>
-
                                 <div class="col-3">
                                     <h2>47</h2>
                                     <h5>Minutes</h5>
                                 </div>
-
                                 <div class="col-3">
                                     <h2>34</h2>
                                     <h5>Seconds</h5>
@@ -67,17 +64,16 @@ export default {
     height: 425px;
 }
 
-#jumbo-bottom {
-    margin-top: 100px;
-    padding: 0 100px;
+#bottom {
+    margin-top: 240px;
+    padding: 0 20px;
 }
 
+#bottom,
 .main {
     height: 200px;
-}
-
-.col-6 {
     background-color: #fcb900;
+    border-radius: 10px;
 }
 
 .col-3 {
@@ -130,5 +126,6 @@ button {
     background-color: #2d4649;
     color: white;
     padding: 10px;
+    border: none;
 }
 </style>
