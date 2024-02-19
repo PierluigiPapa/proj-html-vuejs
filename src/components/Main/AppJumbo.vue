@@ -1,8 +1,52 @@
 <script>
-export default {
-    name: 'AppJumbo',
-}
-</script>
+    export default {
+        name: 'AppJumbo',
+        data() {
+            return {
+                email: '',
+                arrEmail: [],
+                countdown: {
+                    days: 0,
+                    hours: 0,
+                    minutes: 0,
+                    seconds: 0
+                },
+                countdownInterval: null
+            }
+        },
+        mounted() {
+            this.calculateCountdown();
+            this.startCountdown();
+        },
+        methods: {
+            emailGet() {
+                this.arrEmail.push(this.email)
+                this.email = '';
+            },
+            calculateCountdown() {
+                const deadline = new Date('2024-02-23T19:30:00').getTime();
+                let now = new Date().getTime();
+                let difference = deadline - now;
+    
+                if (difference < 0) {
+                    clearInterval(this.countdownInterval);
+                    return;
+                }
+    
+                this.countdown.days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                this.countdown.hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                this.countdown.minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                this.countdown.seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            },
+            startCountdown() {
+                this.countdownInterval = setInterval(() => {
+                    this.calculateCountdown();
+                }, 1000);
+            }
+        }
+    }
+    </script>
+    
 
 <template>
     <section id="jumbo">
@@ -20,26 +64,27 @@ export default {
                                 off
                             </h4>
                             <div class="input-group px-5">
-                                <input class="form-control" placeholder="Enter your E-mail">
+                                <input v-model="email" type="email" class="form-control py-2"
+                                    placeholder="Enter your E-mail" @keyup.enter="emailGet">
                             </div>
-                            <button type="button">SUBSCRIBE</button>
+                            <button @click="emailGet" type="button">SUBSCRIBE</button>
                         </div>
                         <div class="col-6">
                             <div class="row main">
                                 <div class="col-3">
-                                    <h2>26</h2>
+                                    <h2>{{countdown.days}}</h2>
                                     <h5>Days</h5>
                                 </div>
                                 <div class="col-3">
-                                    <h2>01</h2>
+                                    <h2>{{ countdown.hours }}</h2>
                                     <h5>Hours</h5>
                                 </div>
                                 <div class="col-3">
-                                    <h2>47</h2>
+                                    <h2>{{ countdown.minutes }}</h2>
                                     <h5>Minutes</h5>
                                 </div>
                                 <div class="col-3">
-                                    <h2>34</h2>
+                                    <h2>{{ countdown.seconds }}</h2>
                                     <h5>Seconds</h5>
                                 </div>
                             </div>
