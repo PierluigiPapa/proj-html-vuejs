@@ -65,7 +65,7 @@
                             </h4>
                             <div class="input-group px-5">
                                 <input v-model="email" type="email" class="form-control py-2"
-                                    placeholder="Enter your E-mail" @keyup.enter="emailGet">
+                                placeholder="Enter your E-mail" @keyup.enter="emailGet">
                             </div>
                             <button @click="emailGet" type="button">SUBSCRIBE</button>
                         </div>

@@ -149,6 +149,7 @@ ul li a:hover::after {
     display: inline-block;
     vertical-align: middle; 
     margin-right: 10px; 
+    cursor: pointer;
 }
 
 </style>

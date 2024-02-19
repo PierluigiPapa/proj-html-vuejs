@@ -1,10 +1,12 @@
 <script>
 import AppJumbo from './AppJumbo.vue';
-import AppFounder from './AppFounder.vue'
+import AppFounder from './AppFounder.vue';
+import AppCourses from './AppCourses.vue';
 export default {
     components: {
         AppJumbo,
         AppFounder,
+        AppCourses,
     }
 }
 </script>
@@ -13,8 +15,10 @@ export default {
    <main>
     <AppJumbo></AppJumbo>
 
-    <AppFounder></AppFounder>   
-    
+    <AppFounder></AppFounder>
+
+    <AppCourses></AppCourses>
+
    </main>
 </template>
 

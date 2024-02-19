@@ -16,6 +16,9 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {faList, faSignal } from '@fortawesome/free-solid-svg-icons';
+import { faClock } from '@fortawesome/free-regular-svg-icons';
+
 
 
 
@@ -24,7 +27,10 @@ library.add(
   faXTwitter,
   faLinkedin,
   faFacebook,
-  faInstagram
+  faInstagram,
+  faSignal,
+  faList,
+  faClock,
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
