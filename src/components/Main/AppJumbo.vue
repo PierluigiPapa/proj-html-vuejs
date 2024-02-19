@@ -20,10 +20,9 @@ export default {
                                 off
                             </h4>
                             <div class="input-group px-5">
-                                <input v-model="email" type="email" class="form-control py-2"
-                                    placeholder="Enter your E-mail" @keyup.enter="emailGet">
-                                <button @click="emailGet" type="button">SUBSCRIBE</button>
+                                <input class="form-control" placeholder="Enter your E-mail">
                             </div>
+                            <button type="button">SUBSCRIBE</button>
                         </div>
                         <div class="col-6">
                             <div class="row main">
@@ -75,7 +74,6 @@ export default {
     background-color: #fcb900;
     border-radius: 10px;
 }
-
 .col-3 {
     display: flex;
     justify-content: center;
@@ -95,6 +93,7 @@ h1 {
 
 h4 {
     font-weight: bold;
+    color: #333333;
 }
 
 h2 {
@@ -118,14 +117,23 @@ h2 {
 }
 
 input {
+    position: absolute;
+    box-shadow: 14px 10px 21px -10px rgba(0,0,0,0.75);
     border-radius: 50px;
+    height: 54px;
 }
 
 button {
-    border-radius: 50px;
+    position: relative;
     background-color: #2d4649;
     color: white;
+    bottom: 2%;
+    top: -27%;
+    left: 75%; 
     padding: 10px;
     border: none;
+    border-radius: 50px;
+    width: 140px;
+    height: 55px;
 }
 </style>
