@@ -74,6 +74,8 @@ export default {
     background-color: #fcb900;
     border-radius: 10px;
 }
+
+
 .col-3 {
     display: flex;
     justify-content: center;
@@ -92,6 +94,8 @@ h1 {
 }
 
 h4 {
+    margin-top: 60px;
+    font-size: 30px;
     font-weight: bold;
     color: #333333;
 }
@@ -128,7 +132,7 @@ button {
     background-color: #2d4649;
     color: white;
     bottom: 2%;
-    top: -27%;
+    top: -25%;
     left: 75%; 
     padding: 10px;
     border: none;
