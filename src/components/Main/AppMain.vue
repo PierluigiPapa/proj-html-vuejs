@@ -2,24 +2,28 @@
 import AppJumbo from './AppJumbo.vue';
 import AppFounder from './AppFounder.vue';
 import AppCourses from './AppCourses.vue';
+import AppBook from './AppBook.vue';
 export default {
     components: {
         AppJumbo,
         AppFounder,
         AppCourses,
+        AppBook,
     }
 }
 </script>
 
 <template>
-   <main>
+   
     <AppJumbo></AppJumbo>
 
     <AppFounder></AppFounder>
 
     <AppCourses></AppCourses>
 
-   </main>
+    <AppBook></AppBook>
+
+
 </template>
 
 <style lang="scss" scoped>

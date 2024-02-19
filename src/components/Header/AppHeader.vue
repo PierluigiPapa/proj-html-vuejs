@@ -20,7 +20,7 @@ export default {
                 },
 
                 {
-                    text: 'Add Courses',
+                    text: 'Add Course',
                     url: '#',
                     current: false,
                 },
@@ -70,6 +70,7 @@ export default {
 <style lang="scss" scoped>
 
 .col-6 {
+    padding-right: 190px;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -91,7 +92,7 @@ ul {
 .new {
     position: absolute;
     bottom: 80%;
-    right: 35%;
+    right: 36%;
     font-size: 9px;
     padding: 1px 5px;
     background-color: #dc1245;
@@ -107,6 +108,7 @@ ul li a {
     font-weight: bold;
     cursor: pointer;
     position: relative; 
+    white-space: nowrap;
 }
 
 ul li a::before {
