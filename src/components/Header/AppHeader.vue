@@ -70,6 +70,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
 .col-6 {
     height: 100px;
     display: flex;
@@ -107,17 +108,25 @@ ul li a {
     padding-bottom: 10px;
     font-weight: bold;
     cursor: pointer;
+    position: relative; // Aggiungi questa riga per posizionare il pseudoelemento ::after rispetto all'elemento <a>
 }
 
-ul li a:hover,
-.active {
-    border-bottom: 2px solid #fcb900;
+/* Aggiungi una freccia sottolineata all'hover */
+ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; // Spessore della linea
+    background-color: #fcb900; // Colore della linea
+    transition: width 0.3s ease; // Animazione della larghezza
 }
 
-i:hover {
-    color: #fcb900;
-    cursor: pointer;
+ul li a:hover::after {
+    width: 100%; // Larghezza della linea all'hover
 }
+
 
 .fa-icon {
     display: inline-block;
