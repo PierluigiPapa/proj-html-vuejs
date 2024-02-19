@@ -108,23 +108,43 @@ ul li a {
     padding-bottom: 10px;
     font-weight: bold;
     cursor: pointer;
-    position: relative; // Aggiungi questa riga per posizionare il pseudoelemento ::after rispetto all'elemento <a>
+    position: relative; 
 }
 
-/* Aggiungi una freccia sottolineata all'hover */
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent; 
+    border-right: 5px solid transparent; 
+    border-bottom: 5px solid #fcb900;
+    transition: border-bottom-color 0.3s ease, top 0.3s ease; 
+    z-index: 1; 
+}
+
+ul li a:hover::before {
+    border-bottom-color: transparent; 
+    top: calc(100% - 5px); 
+}
+
 ul li a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -5px; 
     left: 0;
-    width: 0;
-    height: 2px; // Spessore della linea
-    background-color: #fcb900; // Colore della linea
-    transition: width 0.3s ease; // Animazione della larghezza
+    width: 100%;
+    height: 2px; 
+    background-color: transparent; 
+    transition: background-color 0.3s ease; 
 }
 
 ul li a:hover::after {
-    width: 100%; // Larghezza della linea all'hover
+    background-color: #fcb900;
 }
 
 
