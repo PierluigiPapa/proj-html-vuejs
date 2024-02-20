@@ -76,8 +76,8 @@ export default {
       <div class="container">
         <div class="row height">
           <div v-for="(course, index) in courses" :key="index" class="col-4 d-flex justify-content-center align-items-start p-0">
-            <div class="card" style="width: 18rem;">
-              <img :src="course.image" class="card-img-top banner-image" alt="...">
+            <div class="card" style="width: 480px;">
+              <img :src="course.image" class="card-img-top banner-image" alt="">
               <p class="banner">SPECIAL</p>
               <h4 class="banner-price">{{ course.price }}</h4>
               <div class="card-body">
@@ -89,7 +89,7 @@ export default {
                     <font-awesome-icon icon="fa-solid fa-signal" class="fa-solid me-1" />
                     <p class="m-0 sub-text">{{ course.level }}</p>
                   </div>
-                  <div class="col-4 d-flex align-items-center ps-1">
+                  <div class="col-4 d-flex align-items-center">
                     <font-awesome-icon icon="fa solid fa-list" class="fa-solid me-1" />
                     <p class="m-0 sub-text">{{ course.lectures }}</p>
                   </div>
@@ -109,7 +109,7 @@ export default {
 
 
 
-<style scoped>
+<style lang="scss" scoped>
 #card-main {
     height: 1050px;
     background-color: #edf2f5;
@@ -117,6 +117,8 @@ export default {
 
 .card {
     position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
     cursor: pointer;
 }
 
@@ -176,7 +178,7 @@ h2 {
 }
 
 .sub-text {
-    font-size: 9px;
+    font-size: 13px;
     padding-left: 3px;
     padding-right: 20px;
     white-space: nowrap;
@@ -192,9 +194,14 @@ h2 {
     background-color: #fcb900;
     border-radius: 50px;
     margin: 10px 570px;
+    margin-top: 70px;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.5s;
+}
+
+.col-4 {
+    padding-left: 30px;
 }
 
 .loading:hover {
