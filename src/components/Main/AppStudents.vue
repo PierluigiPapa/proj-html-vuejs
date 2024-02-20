@@ -68,12 +68,12 @@ export default {
                     <h2 class="text-center py-5">What Students Say</h2>
                     <div class="d-flex justify-content-center">
                         <div class="d-flex justify-content-center">
-                            <font-awesome-icon icon="fa-solid fa-arrow-left" class="mt-4 fa-solid" id="prev" @click="goToNext" @mouseenter="stopAutoPlay"
+                            <font-awesome-icon icon="fa-solid fa-arrow-left" id="prev" @click="goToPrev" @mouseenter="stopAutoPlay"
                                 @mouseleave="startAutoPlay"/>
                             <figure v-for="(student, i) in students" :key="i" class="student-wrapper">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <img :src="student.image" :alt="student.text" :title="student.title"
-                                        class="student-image">
+                                        :class="{ 'enlarged': isImageEnlarged && currentIndex === i }">
                                 </div>
                                 <figcaption>
                                     <div class="d-flex justify-content-center align-items-center flex-column">
@@ -84,13 +84,12 @@ export default {
                                             <font-awesome-icon icon="fa-solid fa-star"/>
                                             <font-awesome-icon icon="fa-solid fa-star"/>
                                             <font-awesome-icon icon="fa-solid fa-star"/>
-                                            
                                         </div>
                                         <p class="text-center" v-show="currentIndex === i">{{ student.text }}</p>
                                     </div>
                                 </figcaption>
                             </figure>
-                            <font-awesome-icon icon="fa-solid fa-arrow-right" class="mt-4 fa-solid" id="prev" @click="goToNext" @mouseenter="stopAutoPlay"
+                            <font-awesome-icon icon="fa-solid fa-arrow-right" class="fa-solid" id="prev" @click="goToPrev" @mouseenter="stopAutoPlay"
                                 @mouseleave="startAutoPlay"/>
                         </div>
                         <!-- testo next -->
@@ -113,20 +112,29 @@ h2 {
 }
 
 .student-wrapper {
-    margin-right: 20px;
+    width: 100px;
+    margin-right: 30px;
 }
 
 img {
+    width: 70px;
     border-radius: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
-.fa-solid {
-    padding-left: 20px;
-    padding-right: 30px;
+.fa-arrow-left {
+    padding-right: 20px;
+    padding-top: 20px;
     font-size: 30px;
     cursor: pointer;
 }
+
+.fa-arrow-right {
+    padding-top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 
 .fa-star {
     color: #fcb900;
@@ -137,12 +145,8 @@ strong {
     font-size: 20px;
 }
 
-/* Aggiungi la transizione e le dimensioni ingrandite */
-.student-image {
+.enlarged {
     transition: transform 0.3s ease;
-}
-
-.student-image:hover {
-    transform: scale(1.2); /* Imposta le dimensioni ingrandite */
+    transform: scale(1.5);
 }
 </style>
