@@ -4,6 +4,7 @@ import AppFounder from './AppFounder.vue';
 import AppCourses from './AppCourses.vue';
 import AppBook from './AppBook.vue';
 import AppOptions from './AppOptions.vue';
+import AppStats from './AppStats.vue';
 
 export default {
     components: {
@@ -12,6 +13,7 @@ export default {
         AppCourses,
         AppBook,
         AppOptions,
+        AppStats,
     }
 }
 </script>
@@ -28,6 +30,7 @@ export default {
 
     <AppOptions></AppOptions>
 
+    <AppStats></AppStats>
 
 </template>
 
