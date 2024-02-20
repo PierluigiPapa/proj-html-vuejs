@@ -163,6 +163,7 @@ h2 {
     padding-right: 200px;
     margin-bottom: 0;
     margin-top: 15px;
+    font-family: sans-serif;
 }
 
 input {

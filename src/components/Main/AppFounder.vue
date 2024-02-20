@@ -47,6 +47,7 @@ p {
     font-size: 15px;
     margin-top: 70px;
     padding-right: 130px;
+    font-family: sans-serif;
 }
 
 

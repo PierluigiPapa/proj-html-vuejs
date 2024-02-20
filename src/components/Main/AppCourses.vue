@@ -135,8 +135,8 @@ export default {
 
 .banner-price {
     position: absolute;
-    top: 20%;
-    left: 43%;
+    top: 25%;
+    left: 45%;
     color: white;
     display: none;
 }
@@ -169,6 +169,7 @@ h2 {
 
 .course {
     color: #aaaaaa;
+    font-family: sans-serif;
 }
 
 .separator {
@@ -183,6 +184,7 @@ h2 {
     padding-right: 20px;
     white-space: nowrap;
     text-align: center;
+    font-family: sans-serif;
 }
 
 .fa-solid {
