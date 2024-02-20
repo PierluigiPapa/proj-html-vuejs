@@ -59,7 +59,7 @@ h2 {
     padding-top: 130px;
     padding-left: 150px;
     padding-right: 60px;
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: bold;
 }
 
@@ -69,7 +69,7 @@ p {
     padding-left: 150px;
     padding-right: 60px;
     font-style: italic;
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .box {

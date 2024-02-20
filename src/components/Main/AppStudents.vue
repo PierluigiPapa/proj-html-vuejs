@@ -4,13 +4,13 @@ export default {
     data() {
         return {
             autoPlay: null,
-            currentIndex: 0,
+            currentIndex: 1,
             isImageEnlarged: false,
             students: [
                 {
                     image: '../src/assets/images/1-100x100.jpg',
-                    title: 'Ciao',
-                    text: 'Ciao',
+                    title: 'Come as you are',
+                    text: "MasterStudy used is an excellent workshop whether you come as a counselor, advisor, administrator, or faculty member. I am going home empowered. I am looking forward to attending the On Course MasterStudy and the MasterStudy National Conference next year and facilitating the use of this excellent retention/student success course at my college.",
                 },
 
                 {
@@ -21,8 +21,8 @@ export default {
 
                 {
                     image: '../src/assets/images/4-100x100.jpg',
-                    title: 'Ciao',
-                    text: 'Ciao',
+                    title: 'Investing on your future',
+                    text: "MasterStudy used is an excellent workshop whether you come as a counselor, advisor, administrator, or faculty member. I am going home empowered. I am looking forward to attending the On Course MasterStudy and the MasterStudy National Conference next year and facilitating the use of this excellent retention/student success course at my college.",
                 },
             ]
         };
@@ -38,7 +38,7 @@ export default {
     methods: {
         goToNext() {
             this.isImageEnlarged = true;
-            if (this.isLastImage) this.currentIndex = 0;
+            if (this.isLastImage) this.currentIndex = 1;
             else this.currentIndex++;
         },
         goToPrev() {
@@ -53,7 +53,7 @@ export default {
             clearInterval(this.autoPlay);
         },
         startAutoPlay() {
-            this.autoPlay = setInterval(this.goToNext, 4000);
+            this.autoPlay = setInterval(this.goToNext, 4000000);
         }
     },
     mounted() {
@@ -64,38 +64,42 @@ export default {
 
 <template>
     <section id="students">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h2 class="text-center py-5">What Students Say</h2>
-            <div class="d-flex justify-content-center">
-              <div class="d-flex justify-content-center">
-                <font-awesome-icon icon="fa-solid fa-arrow-left" id="prev" @click="goToPrev" @mouseenter="stopAutoPlay"
-                  @mouseleave="startAutoPlay"/>
-                <figure v-for="(student, i) in students" :key="i" class="student-wrapper">
-                  <div class="d-flex justify-content-center align-items-center">
-                    <img :src="student.image" :alt="student.text" :title="student.title"
-                      :class="{ 'enlarged': isImageEnlarged && currentIndex === i }">
-                  </div>
-                  <figcaption>
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <strong v-show="currentIndex === i" class="text-center title">{{ student.title }}</strong>
-                      <div v-show="currentIndex === i" class="star-rating">
-                        <font-awesome-icon v-for="star in Array(5).fill()" icon="fa-solid fa-star" :key="star"/>
-                      </div>
-                      <p class="text-center student-text" v-show="currentIndex === i">{{ student.text }}</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center py-5">What Students Say</h2>
+                    <div class="d-flex justify-content-center flex-column">
+                        <div class="d-flex justify-content-center">
+                            <font-awesome-icon icon="fa-solid fa-arrow-left" id="prev" @click="goToPrev"
+                                @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay" />
+
+                            <div v-for="(student, i) in students" :key="i">
+                                <div class="student-image-container d-flex justify-content-center align-items-center">
+                                    <img :src="student.image" :class="{ 'enlarged': isImageEnlarged && currentIndex === i }">
+                                </div>
+                            </div>
+                            <font-awesome-icon icon="fa-solid fa-arrow-right" class="fa-solid" @click="goToNext"
+                                @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay" />
+                        </div>
+
+                        <div class="student-text-container">
+                            <div class="d-flex justify-content-center align-items-center flex-column">
+                                <strong class="text-center title">{{ students[currentIndex].title }}</strong>
+                                <div class="star-rating">
+                                    <font-awesome-icon v-for="star in Array(5).fill()" icon="fa-solid fa-star" :key="star"/>
+                                </div>
+                                
+                                <p class="text-center student-text">{{ students[currentIndex].text }}</p>
+                            </div>
+                        </div>
                     </div>
-                  </figcaption>
-                </figure>
-                <font-awesome-icon icon="fa-solid fa-arrow-right" class="fa-solid" @click="goToNext" @mouseenter="stopAutoPlay"
-                  @mouseleave="startAutoPlay"/>
-              </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
-  </template>
+</template>
+
+
 
 
 <style lang="scss" scoped>
@@ -110,22 +114,20 @@ h2 {
 }
 
 img {
-    width: 70px;
-    margin-left: 10px;
-    margin-right: 20px;
+    width: 50px;
     border-radius: 50px;
     margin-bottom: 30px;
 }
 
 .fa-arrow-left {
-    padding-right: 20px;
+    padding-right: 40px;
     padding-top: 20px;
     font-size: 30px;
     cursor: pointer;
 }
 
 .fa-arrow-right {
-    padding-left: 20px;
+    padding-left: 10px;
     padding-top: 20px;
     font-size: 30px;
     cursor: pointer;
@@ -133,6 +135,7 @@ img {
 
 .fa-star {
     color: #fcb900;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -141,19 +144,22 @@ img {
     white-space: nowrap;
 }
 
-p {
+.student-text {
     font-size: 15px;
-    margin-right: 10px;
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
+    width: 500px;
+    height: 400px;
 }
 
 .enlarged {
     transition: transform 0.3s ease;
-    transform: scale(1.5);
+    transform: scale(2);
 }
 
-.student-wrapper:not(.enlarged) {
-    transition: none; /* Rimuove la transizione per le immagini non ingrandite */
+.student-image-container {
+    padding-right: 30px;
+    padding-left: -30px;
+    display: block;
 }
 
 </style>

@@ -93,7 +93,7 @@ h5 {
 
 .card-text {
     font-size: 15px;
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: #333333;
 }
 

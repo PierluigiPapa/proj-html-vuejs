@@ -169,7 +169,7 @@ h2 {
 
 .course {
     color: #aaaaaa;
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .separator {
@@ -184,7 +184,7 @@ h2 {
     padding-right: 20px;
     white-space: nowrap;
     text-align: center;
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .fa-solid {

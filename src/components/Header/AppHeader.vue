@@ -1,9 +1,6 @@
 <script>
 export default {
     name: 'AppHeader',
-    props: {
-        navOptions: Array
-    },
     data () {
         return {
             navOptions: [
