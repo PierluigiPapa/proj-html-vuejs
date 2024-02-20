@@ -65,6 +65,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../styles/partials/variables.scss' as *;
 
 .col-6 {
     padding-right: 190px;
@@ -92,7 +93,7 @@ ul {
     right: 36%;
     font-size: 9px;
     padding: 1px 5px;
-    background-color: #dc1245;
+    background-color: $rosso;
     color: white;
     border-radius: 3px;
     font-weight: bold;
@@ -100,7 +101,7 @@ ul {
 
 ul li a {
     text-decoration: none;
-    color: #333333;
+    color: $grigioscuro;
     padding-bottom: 10px;
     font-weight: bold;
     cursor: pointer;
@@ -119,7 +120,7 @@ ul li a::before {
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-bottom: 5px solid #fcb900;
+    border-bottom: 5px solid $giallo;
     z-index: 1;
     transition: transform 0.3s ease;
 }
@@ -136,7 +137,7 @@ ul li a::after {
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: #fcb900;
+    background-color: $giallo;
     transition: width 0.3s ease;
 }
 
@@ -153,7 +154,7 @@ ul li a:hover::after {
 }
 
 // .fa-icon:hover {
-//    color: #fcb900;
+//    color: $giallo;
 // }
 
 </style>

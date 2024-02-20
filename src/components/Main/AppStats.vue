@@ -42,6 +42,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../styles/partials/variables.scss' as *;
+
 #stats {
     background-image: url("../../assets/images/counter-1919x1101.jpg");
     background-size: cover;
@@ -53,7 +55,7 @@ export default {
 
 .fa-solid {
     margin-top: 10px;
-    color: white;
+    color: $bianco;
     font-size: 70px;
     margin-right: 20px;
 }
@@ -61,12 +63,12 @@ export default {
 h3 {
     font-size: 45px;
     margin-top: 30px;
-    color: #fcb900;
+    color: $giallo;
 }
 
 p {
     margin-top: -10px;
-    color: white;
+    color: $bianco;
 }
 
 </style>

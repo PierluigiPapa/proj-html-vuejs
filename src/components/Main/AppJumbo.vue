@@ -97,6 +97,8 @@
 </template>
 
 <style lang="scss" scoped>
+@use '../../styles/partials/variables.scss' as *;
+
 #jumbo {
     height: 750px;
     background-image: url("../../assets/images/slide-1.jpg");
@@ -116,7 +118,7 @@
 #bottom,
 .main {
     height: 200px;
-    background-color: #fcb900;
+    background-color: $giallo;
     border-radius: 10px;
 }
 
@@ -135,23 +137,23 @@ h1 {
     padding-right: 250px;
     font-weight: bold;
     font-size: 60px;
-    color: #333333;
+    color: $grigioscuro;
 }
 
 h4 {
     margin-top: 60px;
     font-size: 30px;
     font-weight: bold;
-    color: #333333;
+    color: $grigioscuro;
 }
 
 h2 {
-    color: white;
+    color: $bianco;
     font-size: 60px;
 }
 
 .yellow {
-    color: #fcb900;
+    color: $giallo;
 }
 
 .white {
@@ -176,7 +178,7 @@ input {
 
 button {
     position: relative;
-    background-color: #2d4649;
+    background-color: $verdescuro;
     color: white;
     bottom: 2%;
     top: -25%;

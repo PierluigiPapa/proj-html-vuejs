@@ -56,6 +56,8 @@ export default {
  </template>
 
 <style lang="scss" scoped>
+@use '../../styles/partials/variables.scss' as *;
+
 h2 {
     font-size: 40px;
     font-weight: bold;
@@ -67,7 +69,7 @@ h2 {
 
 .card {
     height: 240px;
-    border-left: 5px solid #fcb900;
+    border-left: 5px solid $giallo;
     border-top: none;
     border-right: none;
     border-bottom: none;
@@ -78,28 +80,28 @@ h2 {
 
 .fa-solid {
     font-size: 70px;
-    color: #fcb900;
+    color: $giallo;
 }
 
 h5 {
     font-weight: bold;
     font-size: 25px;
-    color: #333333;
+    color: $grigioscuro;
 
 }
 
 .card:hover .fa-solid {
-    color: white;
+    color: $bianco;
 }
 
 .card:hover {
-    background-color: #fcb900;
+    background-color: $giallo;
 }
 
 .card-text {
     font-size: 15px;
     font-family: "Open Sans", sans-serif;
-    color: #333333;
+    color: $grigioscuro;
 }
 
 </style>

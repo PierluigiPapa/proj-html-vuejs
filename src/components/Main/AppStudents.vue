@@ -103,6 +103,7 @@ export default {
 
 
 <style lang="scss" scoped>
+@use '../../styles/partials/variables.scss' as *;
 .row {
     width: 100%;
     height: 600px;
@@ -134,7 +135,7 @@ img {
 }
 
 .fa-star {
-    color: #fcb900;
+    color: $giallo;
     margin-top: 10px;
     margin-bottom: 30px;
 }

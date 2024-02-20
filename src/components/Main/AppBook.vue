@@ -32,6 +32,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../styles/partials/variables.scss' as *;
+
 #adv {
     background-image: url("../../assets/images/slider_1-1917x607-1914x606.jpg");
     background-repeat: no-repeat;
@@ -54,7 +56,7 @@ export default {
 }
 
 h2 {
-    color: #fcb900;
+    color: $giallo;
     font-size: 40px;
     padding-top: 130px;
     padding-left: 150px;
@@ -64,7 +66,7 @@ h2 {
 }
 
 p {
-    color: white;
+    color: $bianco;
     font-size: 25px;
     padding-left: 150px;
     padding-right: 60px;
@@ -73,7 +75,7 @@ p {
 }
 
 .box {
-    background-color: white;
+    background-color: $bianco;
     width: 60px;
     height: 250px;
     margin-top: 150px;
@@ -88,6 +90,6 @@ p {
 }
 
 // .fa-solid:hover {
-//     color: #fcb900;
+//     color: $giallo;
 // }
 </style>

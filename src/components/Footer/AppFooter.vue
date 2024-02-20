@@ -80,8 +80,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../styles/partials/variables.scss' as *;
+
+
 footer {
-    background-color: #fcb900;
+    background-color: $giallo;
 }
 
 .row {

@@ -110,9 +110,11 @@ export default {
 
 
 <style lang="scss" scoped>
+@use '../../styles/partials/variables.scss' as *;
+
 #card-main {
     height: 1050px;
-    background-color: #edf2f5;
+    background-color: $grigiochiaro;
 }
 
 .card {
@@ -125,11 +127,11 @@ export default {
 
 .banner {
     position: absolute;
-    color: white;
+    color: $bianco;
     right: 2%;
     top: 2%;
     padding: 2px 6px;
-    background-color: #fcb900;
+    background-color: $giallo;
     border-radius: 3px;
     font-size: 0.6rem;
 }
@@ -138,7 +140,7 @@ export default {
     position: absolute;
     top: 25%;
     left: 45%;
-    color: white;
+    color: $bianco;
     display: none;
 }
 
@@ -172,13 +174,13 @@ h2 {
 }
 
 .course {
-    color: #aaaaaa;
+    color: $grigio;
     font-family: "Open Sans", sans-serif;
 }
 
 .separator {
     height: 1px;
-    border: 1px solid #edf2f5;
+    border: 1px solid $grigiochiaro;
     margin-bottom: 10px;
 }
 
@@ -192,12 +194,12 @@ h2 {
 }
 
 .fa-solid {
-    color: #fcb900;
+    color: $giallo;
 }
 
 .loading {
     padding: 10px 10px;
-    background-color: #fcb900;
+    background-color: $giallo;
     border-radius: 50px;
     margin: 10px 570px;
     margin-top: 70px;
@@ -211,6 +213,6 @@ h2 {
 }
 
 .loading:hover {
-    color: white;
+    color: $bianco;
 }
 </style>
