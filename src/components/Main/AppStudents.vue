@@ -141,12 +141,19 @@ img {
     white-space: nowrap;
 }
 
-.text {
-    margin-right: 60px;
+p {
+    font-size: 15px;
+    margin-right: 10px;
+    font-family: sans-serif;
 }
 
 .enlarged {
     transition: transform 0.3s ease;
     transform: scale(1.5);
 }
+
+.student-wrapper:not(.enlarged) {
+    transition: none; /* Rimuove la transizione per le immagini non ingrandite */
+}
+
 </style>
