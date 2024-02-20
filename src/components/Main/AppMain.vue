@@ -5,6 +5,7 @@ import AppCourses from './AppCourses.vue';
 import AppBook from './AppBook.vue';
 import AppOptions from './AppOptions.vue';
 import AppStats from './AppStats.vue';
+import AppStudents from './AppStudents.vue';
 
 export default {
     components: {
@@ -14,6 +15,7 @@ export default {
         AppBook,
         AppOptions,
         AppStats,
+        AppStudents,
     }
 }
 </script>
@@ -31,6 +33,8 @@ export default {
     <AppOptions></AppOptions>
 
     <AppStats></AppStats>
+
+    <AppStudents></AppStudents>
 
 </template>
 

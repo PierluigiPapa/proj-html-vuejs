@@ -87,7 +87,7 @@ p {
     transition: color 0.5s;
 }
 
-.fa-solid:hover {
-    color: #fcb900;
-}
+// .fa-solid:hover {
+//     color: #fcb900;
+// }
 </style>
