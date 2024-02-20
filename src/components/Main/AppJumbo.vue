@@ -171,6 +171,7 @@ input {
     box-shadow: 14px 10px 21px -10px rgba(0,0,0,0.75);
     border-radius: 50px;
     height: 54px;
+    z-index: 1;
 }
 
 button {
@@ -185,5 +186,6 @@ button {
     border-radius: 50px;
     width: 140px;
     height: 55px;
+    z-index: 99;
 }
 </style>

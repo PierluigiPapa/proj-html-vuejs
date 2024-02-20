@@ -18,7 +18,7 @@ export default {
                     image: "../src/assets/images/12345-1-370x200.png",
                     title: "Nvidia and UE4 Techonolgies Practice",
                     category: "Nvidia",
-                    price: "$76",
+                    price: "€49",
                     level: "Advance",
                     lectures: "8 Lectures",
                     duration: "6 hours"
