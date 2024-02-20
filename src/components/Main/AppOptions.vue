@@ -68,6 +68,11 @@ h2 {
 .card {
     height: 240px;
     border-left: 5px solid #fcb900;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    box-shadow: 1px 2px 31px 0px rgba(0,0,0,0.25);
+    border-radius: 0;
     cursor: pointer;
 }
 

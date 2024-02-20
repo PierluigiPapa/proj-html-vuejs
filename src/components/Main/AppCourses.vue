@@ -120,6 +120,7 @@ export default {
     margin-top: 20px;
     margin-left: 20px;
     cursor: pointer;
+    border-radius: 0;
 }
 
 .banner {
@@ -141,6 +142,9 @@ export default {
     display: none;
 }
 
+.card-img-top {
+    border-radius: 0;
+}
 
 .card:hover .banner-price {
     display: block;
