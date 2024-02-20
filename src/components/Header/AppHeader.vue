@@ -149,6 +149,11 @@ ul li a:hover::after {
     vertical-align: middle; 
     margin-right: 10px; 
     cursor: pointer;
+    transition: color 0.3s ease;
 }
+
+// .fa-icon:hover {
+//    color: #fcb900;
+// }
 
 </style>
