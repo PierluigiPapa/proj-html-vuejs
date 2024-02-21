@@ -205,7 +205,8 @@ h2 {
     margin-top: 70px;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.5s;
+    color: $bianco;
+    transition: background-color 0.3s, color 0.3s, filter 0.3s;
 }
 
 .col-4 {
@@ -213,6 +214,6 @@ h2 {
 }
 
 .loading:hover {
-    color: $bianco;
+    background-color: darken($giallo, 10%); 
 }
 </style>
