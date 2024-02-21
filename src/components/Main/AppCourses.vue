@@ -56,7 +56,7 @@ export default {
 
                 {
                     image: "../src/assets/images/photo-1475452779376-caebfb988090-370x200.jpeg",
-                    title: "Nvidia and UE4 Techonolgies Practice",
+                    title: "Road Bike Manual",
                     category: "Bycicling",
                     price: "€90",
                     level: "Beginner",
