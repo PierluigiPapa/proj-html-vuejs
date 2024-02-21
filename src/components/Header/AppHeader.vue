@@ -153,8 +153,8 @@ ul li a:hover::after {
     transition: color 0.3s ease;
 }
 
-// .fa-icon:hover {
-//    color: $giallo;
-// }
+.fa-icon:hover {
+    color: $giallo;
+}
 
 </style>

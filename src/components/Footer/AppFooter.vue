@@ -113,9 +113,9 @@ p {
     cursor: pointer;
 }
 
-/* .fa-brands:hover {
+.fa-brands:hover {
     color: white;
-} */
+}
 
 .contacts-first {
     margin-bottom: 20px;
@@ -134,9 +134,9 @@ ul li {
     transition: color 0.5s;
 }
 
-/* li:hover {
+li:hover {
     color: white;
-} */
+}
 
 ul li a {
     cursor: pointer;
@@ -156,9 +156,9 @@ h4 {
     cursor: pointer;
 }
 
-/* h4:hover {
+h4:hover {
     color: white;
-} */
+}
 
 .right-description {
     margin-left: 10px;

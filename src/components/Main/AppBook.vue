@@ -89,7 +89,7 @@ p {
     transition: color 0.5s;
 }
 
-// .fa-solid:hover {
-//     color: $giallo;
-// }
+.fa-solid:hover {
+    color: $giallo;
+    }
 </style>
