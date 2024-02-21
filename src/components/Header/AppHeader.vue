@@ -94,7 +94,7 @@ ul {
     font-size: 9px;
     padding: 1px 5px;
     background-color: $rosso;
-    color: white;
+    color: $bianco;
     border-radius: 3px;
     font-weight: bold;
 }

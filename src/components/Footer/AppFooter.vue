@@ -60,7 +60,7 @@ export default {
                 <div class="col-3">
                     <h3>PAGES</h3>
                     <ul class="d-flex flex-wrap ps-3">
-                        <li v-for="page in pagesInfo"><a>{{ page }}</a></li>
+                        <li v-for="page in pagesInfo"><a href="#">{{ page }}</a></li>
                     </ul>
                 </div>
                 <div class="col-3">
@@ -114,7 +114,7 @@ p {
 }
 
 .fa-brands:hover {
-    color: white;
+    color: $bianco;
 }
 
 .contacts-first {
@@ -135,7 +135,16 @@ ul li {
 }
 
 li:hover {
-    color: white;
+    color: $bianco;
+}
+
+a {
+    text-decoration: none;
+    color: $grigioscuro
+}
+
+a:hover {
+    color: $bianco;
 }
 
 ul li a {
@@ -157,7 +166,7 @@ h4 {
 }
 
 h4:hover {
-    color: white;
+    color: $bianco;
 }
 
 .right-description {

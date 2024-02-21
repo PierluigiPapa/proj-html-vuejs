@@ -157,7 +157,7 @@ h2 {
 }
 
 .white {
-    color: white;
+    color: $bianco;
 }
 
 .text-grey {
@@ -179,7 +179,7 @@ input {
 button {
     position: relative;
     background-color: $verdescuro;
-    color: white;
+    color: $bianco;
     bottom: 2%;
     top: -25%;
     left: 75%; 
