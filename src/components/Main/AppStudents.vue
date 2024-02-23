@@ -38,7 +38,7 @@ export default {
     methods: {
         goToNext() {
             this.isImageEnlarged = true;
-            if (this.isLastImage) this.currentIndex = 1;
+            if (this.isLastImage) this.currentIndex = 0;
             else this.currentIndex++;
         },
         goToPrev() {
@@ -53,7 +53,7 @@ export default {
             clearInterval(this.autoPlay);
         },
         startAutoPlay() {
-            this.autoPlay = setInterval(this.goToNext, 4000);
+            this.autoPlay = setInterval(this.goToNext, 2000);
         }
     },
     mounted() {
